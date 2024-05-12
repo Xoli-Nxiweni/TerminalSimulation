@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Ubuntu Sans', Courier New, Courier, monospace;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: #363e74;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 0 10%;
+}
+::selection {
+    background: #fff;
+    color: #000;
+}
+.block{
+    position: relative;
+    margin: 0 auto;
+    color: #fff;
+    padding: 20px;
+    background: linear-gradient(0deg, rgb(0, 0, 0), rgb(70, 70, 70));
+}
+p{
+    font-size: 1.3em;
+}
+.glow::before, .glow::after{
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, yellow, orange, blue, green, purple, coral, whitesmoke,
+    aqua, pink, burlywood, gray);
+    background-size: 250%;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    z-index: -1;
+    animation: animate 20s linear infinite;
+}
+
+@keyframes animate {
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+.glow::after{
+    filter: blur(40px);
+}
