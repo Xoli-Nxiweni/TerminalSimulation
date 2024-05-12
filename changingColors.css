@@ -24,7 +24,7 @@ body{
     background: linear-gradient(0deg, rgb(0, 0, 0), rgb(70, 70, 70));
 }
 p{
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 .glow::before, .glow::after{
     content: '';
