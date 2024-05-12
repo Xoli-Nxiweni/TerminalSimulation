@@ -10,7 +10,7 @@ body{
     display: flex;
     align-items: center;
     height: 100vh;
-    padding: 0 10%;
+    padding: 0 15%;
 }
 ::selection {
     background: #fff;
@@ -53,4 +53,20 @@ p{
 }
 .glow::after{
     filter: blur(40px);
+}
+@media (max-width:767px) {
+    body{
+        padding: 0 10%;
+    }
+    p{
+        font-size: .9em;
+    }
+}
+@media (max-width:395px) {
+    body{
+        padding: 0 10%;
+    }
+    p{
+        font-size: .6em;
+    }
 }
